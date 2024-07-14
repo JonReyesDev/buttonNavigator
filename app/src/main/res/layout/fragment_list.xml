@@ -17,15 +17,17 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="@color/miColor"
+            android:background="@color/black"
             app:subtitleTextColor="@color/miColor"
             app:title="Filtrar alumnos"
-            android:background="@color/header"/>
+            app:titleTextColor="@color/miColor" />
 
         <!-- Content area with padding -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#000000"
+            android:backgroundTint="#000000"
             android:orientation="vertical"
             android:padding="20dp">
 
@@ -33,12 +35,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sfrmLista"
-                android:textSize="25sp"
-                android:padding="10sp"
-                android:textColor="@color/white"
+                android:background="@android:color/holo_green_dark"
                 android:gravity="center"
-                android:background="@color/miColor"/>
+                android:padding="10sp"
+                android:text="@string/sfrmLista"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp" />
 
             <!-- ListView -->
             <ListView
@@ -46,7 +49,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="140sp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:cacheColorHint="@color/white"
+                android:background="#1C1B1B" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

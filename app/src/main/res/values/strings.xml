@@ -1,24 +1,15 @@
 <resources>
     <string name="app_name">appMenuButton</string>
-    <string name="sfrmHome">Inicio</string>
-    <string name="sfrmLista">Lista de Alumnos</string>
+    <string name="sfrmHome">Home</string>
+    <string name="sfrmLista">Lista Alumnos</string>
     <string name="sfrmDb">Acceso a Datos</string>
     <string name="sfrmAc">Acerca de</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="alumno">QUI MORA ÁNGEL ERNESTO</string>
-    <string name="materia">PROGRAMACIÓN MÓVIL</string>
-    <string name="carrera">ING. TECNOLOGÍAS DE LA INFORMACIÓN</string>
-    <string name="linkedin">
-        <![CDATA[
-        <a href="https://www.linkedin.com/in/angel-q-a82044203/">Ángel Qui</a>
-        ]]>
-    </string>
-    <string name="github">
-        <![CDATA[
-        <a href="https://github.com/migurd">Migurd</a>
-        ]]>
-    </string>
+    <string name="alumno">Reyes Lizarraga Jonathan Alexis</string>
+    <string name="materia">Programacion Movil</string>
+    <string name="carrera">ING. en Tecnologias de la Informacion</string>
+
     <string-array name="alumnos">
         <item>QUEZADA RAMOS JULIO EMILIANO</item>
         <item>RAMÍREZ MANRÍQUEZ JOSÉ LUIS</item>

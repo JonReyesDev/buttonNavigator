@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
     tools:context=".AboutFragment">
 
     <!-- Toolbar with SearchView -->
@@ -11,10 +12,10 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:titleTextColor="@color/miColor"
+        android:background="@color/black"
         app:subtitleTextColor="@color/miColor"
         app:title="Filtrar alumnos"
-        android:background="@color/header"/>
+        app:titleTextColor="@color/miColor" />
 
     <!-- Scrollable container with specified height -->
     <ScrollView
@@ -32,12 +33,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sfrmAc"
-                android:textSize="25sp"
-                android:textColor="@color/white"
-                android:padding="10sp"
+                android:background="@android:color/holo_green_dark"
                 android:gravity="center"
-                android:background="@color/miColor"/>
+                android:padding="10sp"
+                android:text="@string/sfrmAc"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -50,11 +51,12 @@
                 android:layout_height="450dp"
                 android:layout_marginBottom="5dp"
                 android:fillViewport="true">
+
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/recId"
-                    />
+                    android:background="@color/black" />
             </ScrollView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -63,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_margin="20dp"
-                android:backgroundTint="@color/miColor"
+                android:backgroundTint="#393232"
                 android:src="@mipmap/add_person"
                 app:borderWidth="2dp"
                 app:elevation="3dp" />

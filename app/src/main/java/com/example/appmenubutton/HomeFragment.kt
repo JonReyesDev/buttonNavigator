@@ -39,17 +39,6 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Find TextViews after inflating the view
-        val linkedin: TextView = view.findViewById(R.id.linkedin)
-        val github: TextView = view.findViewById(R.id.github)
-
-        // Set HTML content for TextViews
-        linkedin.text = Html.fromHtml(getString(R.string.linkedin))
-        linkedin.movementMethod = LinkMovementMethod.getInstance()
-
-        github.text = Html.fromHtml(getString(R.string.github))
-        github.movementMethod = LinkMovementMethod.getInstance()
-
         return view
     }
 

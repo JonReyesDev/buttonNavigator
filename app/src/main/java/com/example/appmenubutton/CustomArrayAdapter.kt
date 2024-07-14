@@ -1,10 +1,15 @@
 import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Filter
+import android.widget.TextView
+import com.example.appmenubutton.R
 import java.util.Locale
 
 class CustomArrayAdapter(context: Context, private val items: List<String>) :
-    ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, items) {
+    ArrayAdapter<String>(context, R.layout.list_item, items) {
 
     private var filteredItems: List<String> = items
 
@@ -14,6 +19,13 @@ class CustomArrayAdapter(context: Context, private val items: List<String>) :
 
     override fun getItem(position: Int): String? {
         return filteredItems[position]
+    }
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view: View = convertView ?: LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
+        val textViewItem = view.findViewById<TextView>(R.id.textViewItem)
+        textViewItem.text = getItem(position)
+        return view
     }
 
     override fun getFilter(): Filter {
@@ -37,7 +49,7 @@ class CustomArrayAdapter(context: Context, private val items: List<String>) :
 
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                filteredItems = results?.values as List<String>? ?: items
+                filteredItems = results?.values as? List<String> ?: items
                 notifyDataSetChanged()
             }
         }

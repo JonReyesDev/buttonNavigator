@@ -3,123 +3,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FF9E9595"
     tools:context=".DbFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#000000"
         android:orientation="vertical"
         android:padding="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sfrmDb"
-            android:textSize="25sp"
-            android:textColor="@color/white"
-            android:padding="10dp"
+            android:background="@android:color/holo_green_dark"
             android:gravity="center"
-            android:background="@color/miColor"/>
+            android:padding="10dp"
+            android:text="@string/sfrmDb"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:background="@color/black"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Matrícula"/>
+                android:text="Matrícula"
+                android:textColor="@color/white" />
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/inMatricula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:hint="2021030311"
                 android:inputType="number"
-                android:hint="2021030262"/>
+                android:textColor="@color/white"
+                android:textColorHint="#6C6A6A"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre"/>
+                android:text="Nombre"
+                android:textColor="@color/white" />
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/inNombre"
-                android:hint="Nombre"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:textColor="@color/white"
+                android:hint="Nombre"
+                android:textColorHint="#6C6A6A"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Domicilio"/>
+                android:text="Domicilio"
+                android:textColor="@color/white" />
+
             <EditText
+                android:id="@+id/inDomicilio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inDomicilio"
-                android:hint="Calle # Colonia CP"/>
+                android:backgroundTint="@color/grey"
+                android:textColor="@color/white"
+                android:hint="Calle # Colonia CP"
+                android:textColorHint="#6C6A6A"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Foto"/>
+                android:textColor="@color/white"
+                android:text="Foto" />
+
             <ImageView
+                android:id="@+id/imgAlumno"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@mipmap/foto"
                 android:layout_gravity="center"
-                android:id="@+id/imgAlumno"/>
+                android:src="@mipmap/foto" />
+
             <Button
+                android:id="@+id/btnSubirFoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Subir Foto"
                 android:layout_gravity="center"
-                android:id="@+id/btnSubirFoto"
-                android:onClick="onUploadPhotoClicked"/>
+                android:backgroundTint="@android:color/holo_green_light"
+                android:onClick="onUploadPhotoClicked"
+                android:textColor="@color/black"
+                android:text="Subir Foto" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Especialidad"/>
+                android:text="Especialidad"
+                android:textColor="@color/white" />
+
             <EditText
+                android:id="@+id/inEspecialidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/inEspecialidad"
-                android:hint="Grado, licenciatura o Ing."/>
+                android:backgroundTint="@color/grey"
+                android:textColor="@color/white"
+                android:hint="Grado, licenciatura o Ing."
+                android:textColorHint="#6C6A6A"
+                android:textStyle="italic" />
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:stretchColumns="*">
+
                 <TableRow>
+
                     <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Guardar"
                         android:id="@+id/btnGuardar"
-                        android:background="@drawable/button_ripple"
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"/>
-                    <Button
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Buscar"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/holo_green_light"
+                        android:text="Guardar"
+                        android:textColor="@color/black" />
+
+                    <Button
                         android:id="@+id/btnBuscar"
-                        android:background="@drawable/button_ripple"
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"/>
-                    <Button
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Borrar"
-                        android:id="@+id/btnBorrar"
-                        android:textColor="@color/black"
-                        android:background="@drawable/button_ripple"
-                        android:enabled="false"
                         android:layout_margin="5dp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/holo_green_light"
+                        android:text="Buscar"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnBorrar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#555050"
+                        android:enabled="false"
+                        android:text="Borrar"
+                        android:textColor="@color/grey" />
                 </TableRow>
             </TableLayout>
         </LinearLayout>
