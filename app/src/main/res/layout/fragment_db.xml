@@ -136,6 +136,7 @@
                         android:layout_weight="1"
                         android:backgroundTint="@android:color/holo_green_light"
                         android:text="Guardar"
+                        android:textSize="10dp"
                         android:textColor="@color/black" />
 
                     <Button
@@ -146,6 +147,7 @@
                         android:layout_weight="1"
                         android:backgroundTint="@android:color/holo_green_light"
                         android:text="Buscar"
+                        android:textSize="10dp"
                         android:textColor="@color/black" />
 
                     <Button
@@ -157,6 +159,7 @@
                         android:backgroundTint="#555050"
                         android:enabled="false"
                         android:text="Borrar"
+                        android:textSize="10dp"
                         android:textColor="@color/grey" />
                 </TableRow>
             </TableLayout>
